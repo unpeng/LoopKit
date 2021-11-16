@@ -1,0 +1,5 @@
+/* The alert title for a resume error */
+"Error Resuming" = "Devam ederken hata oluştu";
+
+/* The alert title for a suspend error */
+"Error Suspending" = "İptal Ederken Hata Oluştu";

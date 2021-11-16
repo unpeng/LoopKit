@@ -153,7 +153,7 @@
 "New Preset" = "Nouveau préréglage";
 
 /* Section title for no-carb food
-The title for override emoji miscellaneous section */
+   The title for override emoji miscellaneous section */
 "Other" = "Autre";
 
 /* The title text for the insulin sensitivity scaling setting */
@@ -214,6 +214,9 @@ The title for override emoji miscellaneous section */
 /* The empty-state text for a configuration value */
 "Tap to set" = "Appuyez pour définir";
 
+/* Text directing the user to configure their first override preset */
+"Tap '+' to create a new override preset." = "Tap '+' to create a new override preset.";
+
 /* The text for the override target range setting */
 "Target Range" = "Zone cible";
 
@@ -239,7 +242,7 @@ The title for override emoji miscellaneous section */
 "Units" = "Unités";
 
 /* Accessibility value for an unknown value
-The default title to use when an entry has none */
+   The default title to use when an entry has none */
 "Unknown" = "Inconnu";
 
 /* Label indicating validation is occurring */
@@ -250,4 +253,3 @@ The default title to use when an entry has none */
 
 /* Title for the workout override range */
 "Workout" = "Entraînement";
-
