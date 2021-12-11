@@ -39,7 +39,9 @@ extension MockPumpManager: PumpManagerUI {
 // MARK: - DeliveryLimitSettingsTableViewControllerSyncSource
 extension MockPumpManager {
     public func syncDeliveryLimitSettings(for viewController: DeliveryLimitSettingsTableViewController, completion: @escaping (DeliveryLimitSettingsResult) -> Void) {
-        completion(.success(maximumBasalRatePerHour: viewController.maximumBasalRatePerHour ?? 5.0, maximumBolus: viewController.maximumBolus ?? 25.0))
+        completion(.success(maximumBasalRatePerHour: viewController.maximumBasalRatePerHour ?? 5.0,
+                            minimumBasalRatePerHour: viewController.minimumBasalRatePerHour ?? 0.0,
+                            maximumBolus: viewController.maximumBolus ?? 25.0))
     }
 
     public func syncButtonTitle(for viewController: DeliveryLimitSettingsTableViewController) -> String {

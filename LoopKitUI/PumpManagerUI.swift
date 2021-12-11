@@ -30,6 +30,8 @@ public protocol PumpManagerSetupViewController {
 
     var maxBasalRateUnitsPerHour: Double? { get set }
 
+    var minBasalRateUnitsPerHour: Double? { get set }
+
     var maxBolusUnits: Double? { get set }
 
     var basalSchedule: BasalRateSchedule? { get set }

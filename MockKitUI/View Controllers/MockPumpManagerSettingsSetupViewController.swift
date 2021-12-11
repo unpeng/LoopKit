@@ -114,6 +114,7 @@ final class MockPumpManagerSettingsSetupViewController: SetupTableViewController
                 let vc = DeliveryLimitSettingsTableViewController(style: .grouped)
 
                 vc.maximumBasalRatePerHour = pumpManagerSetupViewController?.maxBasalRateUnitsPerHour
+                vc.minimumBasalRatePerHour = pumpManagerSetupViewController?.minBasalRateUnitsPerHour
                 vc.maximumBolus = pumpManagerSetupViewController?.maxBolusUnits
 
                 vc.title = sender?.textLabel?.text
@@ -142,6 +143,12 @@ extension MockPumpManagerSettingsSetupViewController: DailyValueScheduleTableVie
 extension MockPumpManagerSettingsSetupViewController: DeliveryLimitSettingsTableViewControllerDelegate {
     func deliveryLimitSettingsTableViewControllerDidUpdateMaximumBasalRatePerHour(_ vc: DeliveryLimitSettingsTableViewController) {
         pumpManagerSetupViewController?.maxBasalRateUnitsPerHour = vc.maximumBasalRatePerHour
+
+        tableView.reloadRows(at: [[Section.configuration.rawValue, ConfigurationRow.deliveryLimits.rawValue]], with: .none)
+    }
+
+    func deliveryLimitSettingsTableViewControllerDidUpdateMinimumBasalRatePerHour(_ vc: DeliveryLimitSettingsTableViewController) {
+        pumpManagerSetupViewController?.minBasalRateUnitsPerHour = vc.minimumBasalRatePerHour
 
         tableView.reloadRows(at: [[Section.configuration.rawValue, ConfigurationRow.deliveryLimits.rawValue]], with: .none)
     }

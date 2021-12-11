@@ -20,6 +20,8 @@ final class MockPumpManagerSetupViewController: UINavigationController, PumpMana
 
     var maxBasalRateUnitsPerHour: Double?
 
+    var minBasalRateUnitsPerHour: Double?
+
     var maxBolusUnits: Double?
 
     var basalSchedule: BasalRateSchedule?

@@ -28,12 +28,16 @@ extension SetBolusError: LocalizedError {
         return String(format: format, NumberFormatter.localizedString(from: NSNumber(value: units), number: .decimal))
     }
 
+    // Try to use the recoverySuggestion for a more helpful bolus failure message
     public var failureReason: String? {
         switch self {
         case .certain(let error):
+            if error.recoverySuggestion != nil {
+                return error.recoverySuggestion! + " and try again"
+            }
             return error.failureReason
         case .uncertain(let error):
-            return error.failureReason
+            return error.recoverySuggestion
         }
     }
 

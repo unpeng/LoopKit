@@ -11,12 +11,14 @@ import UIKit
 public protocol DeliveryLimitSettingsTableViewControllerDelegate: AnyObject {
     func deliveryLimitSettingsTableViewControllerDidUpdateMaximumBasalRatePerHour(_ vc: DeliveryLimitSettingsTableViewController)
 
+    func deliveryLimitSettingsTableViewControllerDidUpdateMinimumBasalRatePerHour(_ vc: DeliveryLimitSettingsTableViewController)
+
     func deliveryLimitSettingsTableViewControllerDidUpdateMaximumBolus(_ vc: DeliveryLimitSettingsTableViewController)
 }
 
 
 public enum DeliveryLimitSettingsResult {
-    case success(maximumBasalRatePerHour: Double, maximumBolus: Double)
+    case success(maximumBasalRatePerHour: Double, minimumBasalRatePerHour: Double, maximumBolus: Double)
     case failure(Error)
 }
 
@@ -48,9 +50,23 @@ public class DeliveryLimitSettingsTableViewController: UITableViewController {
 
     public var maximumBasalRatePerHour: Double? {
         didSet {
-            if isViewLoaded, let cell = tableView.cellForRow(at: IndexPath(row: 0, section: Section.basalRate.rawValue)) as? TextFieldTableViewCell {
+            if isViewLoaded, let cell = tableView.cellForRow(at: IndexPath(row: 0, section: Section.maxBasalRate.rawValue)) as? TextFieldTableViewCell {
                 if let maximumBasalRatePerHour = maximumBasalRatePerHour {
                     cell.textField.text = valueNumberFormatter.string(from:  maximumBasalRatePerHour)
+                    self.isSaved = false
+                } else {
+                    cell.textField.text = nil
+                }
+            }
+        }
+    }
+
+    public var minimumBasalRatePerHour: Double? {
+        didSet {
+            if isViewLoaded, let cell = tableView.cellForRow(at: IndexPath(row: 0, section: Section.minBasalRate.rawValue)) as? TextFieldTableViewCell {
+                if let mimimumBasalRatePerHour = minimumBasalRatePerHour {
+                    cell.textField.text = valueNumberFormatter.string(from:  mimimumBasalRatePerHour)
+                    self.isSaved = false
                 } else {
                     cell.textField.text = nil
                 }
@@ -60,9 +76,10 @@ public class DeliveryLimitSettingsTableViewController: UITableViewController {
 
     public var maximumBolus: Double? {
         didSet {
-            if isViewLoaded, let cell = tableView.cellForRow(at: IndexPath(row: 0, section: Section.bolus.rawValue)) as? TextFieldTableViewCell {
+            if isViewLoaded, let cell = tableView.cellForRow(at: IndexPath(row: 0, section: Section.maxBolus.rawValue)) as? TextFieldTableViewCell {
                 if let maximumBolus = maximumBolus {
                     cell.textField.text = valueNumberFormatter.string(from: maximumBolus)
+                    self.isSaved = false
                 } else {
                     cell.textField.text = nil
                 }
@@ -94,6 +111,10 @@ public class DeliveryLimitSettingsTableViewController: UITableViewController {
         }
     }
 
+    private var everythingIsSet: Bool {
+        return maximumBasalRatePerHour != nil && minimumBasalRatePerHour != nil && maximumBolus != nil
+    }
+
     private lazy var valueNumberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
 
@@ -103,25 +124,45 @@ public class DeliveryLimitSettingsTableViewController: UITableViewController {
         return formatter
     }()
 
+    @objc private func cancel(_ sender: Any?) {
+        self.navigationController?.popViewController(animated: true)
+    }
+
+    private var isSaved = false {
+        didSet {
+            setCancelButton()
+        }
+    }
+
     // MARK: -
+
+    fileprivate func setCancelButton() {
+        if isSaved == false && syncSource != nil {
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel(_:)))
+        } else {
+            self.navigationItem.leftBarButtonItem = nil
+        }
+    }
 
     public override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.register(TextFieldTableViewCell.nib(), forCellReuseIdentifier: TextFieldTableViewCell.className)
         tableView.register(TextButtonTableViewCell.self, forCellReuseIdentifier: TextButtonTableViewCell.className)
+        setCancelButton()
     }
 
     // MARK: - Table view data source
 
     private enum Section: Int {
-        case basalRate
-        case bolus
+        case maxBasalRate
+        case minBasalRate
+        case maxBolus
         case sync
     }
 
     public override func numberOfSections(in tableView: UITableView) -> Int {
-        return syncSource == nil ? 2 : 3
+        return syncSource == nil ? 3 : 4
     }
 
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -130,7 +171,7 @@ public class DeliveryLimitSettingsTableViewController: UITableViewController {
 
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch Section(rawValue: indexPath.section)! {
-        case .basalRate:
+        case .maxBasalRate:
             let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.className, for: indexPath) as! TextFieldTableViewCell
 
             if let maximumBasalRatePerHour = maximumBasalRatePerHour {
@@ -146,9 +187,24 @@ public class DeliveryLimitSettingsTableViewController: UITableViewController {
             cell.delegate = self
 
             return cell
-        case .bolus:
+        case .minBasalRate:
             let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.className, for: indexPath) as! TextFieldTableViewCell
 
+            if let minimumBasalRatePerHour = minimumBasalRatePerHour {
+                cell.textField.text = valueNumberFormatter.string(from: minimumBasalRatePerHour)
+            } else {
+                cell.textField.text = nil
+            }
+            cell.textField.keyboardType = .decimalPad
+            cell.textField.placeholder = isReadOnly ? LocalizedString("Enter a rate in units per hour", comment: "The placeholder text instructing users how to enter a minimum basal rate") : nil
+            cell.textField.isEnabled = !isReadOnly && !isSyncInProgress
+            cell.unitLabel?.text = LocalizedString("U/hour", comment: "The unit string for units per hour")
+
+            cell.delegate = self
+
+            return cell
+        case .maxBolus:
+            let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.className, for: indexPath) as! TextFieldTableViewCell
             if let maximumBolus = maximumBolus {
                 cell.textField.text = valueNumberFormatter.string(from: maximumBolus)
             } else {
@@ -166,7 +222,7 @@ public class DeliveryLimitSettingsTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: TextButtonTableViewCell.className, for: indexPath) as! TextButtonTableViewCell
 
             cell.textLabel?.text = syncSource?.syncButtonTitle(for: self)
-            cell.isEnabled = !isSyncInProgress
+            cell.isEnabled = !isSyncInProgress && everythingIsSet
             cell.isLoading = isSyncInProgress
 
             return cell
@@ -175,9 +231,11 @@ public class DeliveryLimitSettingsTableViewController: UITableViewController {
 
     public override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch Section(rawValue: section)! {
-        case .basalRate:
+        case .maxBasalRate:
             return LocalizedString("Maximum Basal Rate", comment: "The title text for the maximum basal rate value")
-        case .bolus:
+        case .minBasalRate:
+            return LocalizedString("Minimum Basal Rate", comment: "The title text for the minimum basal rate value")
+        case .maxBolus:
             return LocalizedString("Maximum Bolus", comment: "The title text for the maximum bolus value")
         case .sync:
             return nil
@@ -186,9 +244,7 @@ public class DeliveryLimitSettingsTableViewController: UITableViewController {
 
     public override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         switch Section(rawValue: section)! {
-        case .basalRate:
-            return nil
-        case .bolus:
+        case .maxBasalRate, .minBasalRate, .maxBolus:
             return nil
         case .sync:
             return syncSource?.syncButtonDetailText(for: self)
@@ -201,7 +257,7 @@ public class DeliveryLimitSettingsTableViewController: UITableViewController {
 
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch Section(rawValue: indexPath.section)! {
-        case .basalRate, .bolus:
+        case .maxBasalRate, .minBasalRate, .maxBolus:
             if let cell = tableView.cellForRow(at: indexPath) as? TextFieldTableViewCell {
                 if cell.textField.isFirstResponder {
                     cell.textField.resignFirstResponder()
@@ -215,19 +271,25 @@ public class DeliveryLimitSettingsTableViewController: UITableViewController {
             guard let syncSource = syncSource, !isSyncInProgress else {
                 break
             }
+            guard maximumBasalRatePerHour != nil && minimumBasalRatePerHour != nil && maximumBolus != nil else {
+                break
+            }
 
             isSyncInProgress = true
             syncSource.syncDeliveryLimitSettings(for: self) { (result) in
                 DispatchQueue.main.async {
                     switch result {
-                    case .success(maximumBasalRatePerHour: let maxBasal, maximumBolus: let maxBolus):
+                    case .success(maximumBasalRatePerHour: let maxBasal, minimumBasalRatePerHour: let minBasal, maximumBolus: let maxBolus):
                         self.maximumBasalRatePerHour = maxBasal
+                        self.minimumBasalRatePerHour = minBasal
                         self.maximumBolus = maxBolus
 
                         self.delegate?.deliveryLimitSettingsTableViewControllerDidUpdateMaximumBasalRatePerHour(self)
+                        self.delegate?.deliveryLimitSettingsTableViewControllerDidUpdateMinimumBasalRatePerHour(self)
                         self.delegate?.deliveryLimitSettingsTableViewControllerDidUpdateMaximumBolus(self)
 
                         self.isSyncInProgress = false
+                        self.isSaved = true
                     case .failure(let error):
                         let alert = UIAlertController(with: error)
                         self.present(alert, animated: true) {
@@ -255,12 +317,18 @@ extension DeliveryLimitSettingsTableViewController: TextFieldTableViewCellDelega
         let value = valueNumberFormatter.number(from: cell.textField.text ?? "")?.doubleValue
 
         switch Section(rawValue: indexPath.section)! {
-        case .basalRate:
+        // XXX use supportedBasalRates() and roundToSupportedBolusVolume() here??
+        case .maxBasalRate:
             maximumBasalRatePerHour = value
             if syncSource == nil {
                 delegate?.deliveryLimitSettingsTableViewControllerDidUpdateMaximumBasalRatePerHour(self)
             }
-        case .bolus:
+        case .minBasalRate:
+            minimumBasalRatePerHour = value
+            if syncSource == nil {
+                delegate?.deliveryLimitSettingsTableViewControllerDidUpdateMinimumBasalRatePerHour(self)
+            }
+        case .maxBolus:
             maximumBolus = value
             if syncSource == nil {
                 delegate?.deliveryLimitSettingsTableViewControllerDidUpdateMaximumBolus(self)
