@@ -171,8 +171,7 @@ public class HealthKitSampleStore {
                 handler = newValue
             }
 
-            // Xcode 13.3 Interim Hack - comment out next line
-            // oldValue?()
+            oldValue?()
         }
     }
     private let lockedObserverQueryCompletionHandler: Locked<HKObserverQueryCompletionHandler?> = Locked(nil)
@@ -193,8 +192,8 @@ public class HealthKitSampleStore {
             return
         }
 
-        // Hold the completion handler (calling any existing ones) until our next anchored object query returns
-        self.observerQueryCompletionHandler = completionHandler
+        // Hold the completion handler (calling any existing ones) until our next anchored object query returns (comment out for Xcode 13.3 interim fix)
+        // self.observerQueryCompletionHandler = completionHandler
 
         let queryAnchor = self.queryAnchor
         log.default("%@ notified with changes. Fetching from: %{public}@", query, queryAnchor.map(String.init(describing:)) ?? "0")
