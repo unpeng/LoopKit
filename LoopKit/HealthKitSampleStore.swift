@@ -171,7 +171,8 @@ public class HealthKitSampleStore {
                 handler = newValue
             }
 
-            oldValue?()
+            // Xcode 13.3 Interim Hack - comment out next line
+            // oldValue?()
         }
     }
     private let lockedObserverQueryCompletionHandler: Locked<HKObserverQueryCompletionHandler?> = Locked(nil)
