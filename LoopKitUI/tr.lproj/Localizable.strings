@@ -3,7 +3,7 @@
 "%1$@ %2$@" = "%1$@ %2$@";
 
 /* Accessibility format string for (1: localized volume)(2: time) */
-"%1$@ units remaining at %2$@" = "%1$@ ünite %2$@'de kaldı";
+"%1$@ units remaining at %2$@" = "%2$@'de %1$@ ünite kaldı";
 
 /* The format for a glucose target range. (1: min target)(2: max target)(3: glucose unit) */
 "%1$@ – %2$@ %3$@" = "%1$@ – %2$@ %3$@";
@@ -21,7 +21,7 @@
 "Absorption Time" = "Emilim Süresi";
 
 /* The title for the override emoji activity section */
-"Activity" = "Faaliyet";
+"Activity" = "Aktivite";
 
 /* Action sheet confirmation message for pump history deletion */
 "Are you sure you want to delete all history entries?" = "Tüm geçmiş girişlerini silmek istediğinizden emin misiniz?";
@@ -45,10 +45,10 @@
 "Basal, bolus, and correction insulin dose amounts are unaffected." = "Bazal, bolus ve düzeltme insülin doz miktarları etkilenmez.";
 
 /* The title of the cancel action in an action sheet */
-"Cancel" = "Vazgeç";
+"Cancel" = "İptal Et";
 
 /* The text for the override cancellation button */
-"Cancel Override" = "Geçici Ayar İptal et";
+"Cancel Override" = "Geçersiz kılmayı İptal et";
 
 /* Title text for suspend resume button when temp basal canceling */
 "Canceling Temp Basal" = "Geçici Bazalı İptal Et";
@@ -63,7 +63,7 @@
 "Changes will only apply this time you enable the override. The default settings of %@ will not be affected." = "Değişiklikler yalnızca geçersiz kılmayı etkinleştirdiğinizde etkili olur. %@ varsayılan ayarlar etkilenmeyecektir.";
 
 /* Carb entry section footer text explaining absorption time */
-"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Daha büyük öğünler veya yağ ve protein oranı yüksek öğünler için daha uzun bir emilim süresi seçin. Bu algoritma için bir destektir ve kesin olması gerekmez.";
+"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Daha büyük öğünler veya yağ ve protein oranı yüksek öğünler için daha uzun bir emilim süresi seçin. Bu algoritma için bir destektir ve sürenin kesin olması gerekmez.";
 
 /* The format string describing the date of a COB value. The first format argument is the localized date. */
 "com.loudnate.CarbKit.COBDateLabel" = "%1$@'da";
@@ -75,13 +75,13 @@
 "com.loudnate.InsulinKit.IOBDateLabel" = "%1$@'da";
 
 /* The format string describing the starting date of a total value. The first format argument is the localized date. */
-"com.loudnate.InsulinKit.totalDateLabel" = "%1$@'den itibarıyla";
+"com.loudnate.InsulinKit.totalDateLabel" = "%1$@'den beri";
 
 /* The title of the action used to dismiss an error alert */
 "com.loudnate.LoopKit.errorAlertActionTitle" = "Tamam";
 
 /* The title for the override emoji condition section */
-"Condition" = "Şart";
+"Condition" = "Koşul";
 
 /* Title of the setup button to continue */
 "Continue" = "Devam et";
@@ -93,7 +93,7 @@
 "Custom" = "Özel";
 
 /* The title for the custom override entry screen */
-"Custom Override" = "Özel Geçici Ayar";
+"Custom Override" = "Özel Geçersiz kılma";
 
 /* Title of the carb entry date picker cell */
 "Date" = "Tarih";
@@ -105,7 +105,7 @@
 "Duration" = "Süre";
 
 /* The title for the override editing screen */
-"Edit Override" = "Geçici Ayarı Düzenle";
+"Edit Override" = "Geçersiz kılma Düzenle";
 
 /* Footer text for editing an active override (1: preset name) */
 "Editing affects only the active override. The default settings of %@ will not be affected." = "Düzenleme yalnızca etkin geçersiz kılmayı etkiler. %@ varsayılan ayarlar etkilenmeyecektir.";
@@ -141,7 +141,7 @@
 "Medium" = "Orta";
 
 /* Placeholder for minimum value in glucose range */
-"min" = "dk";
+"min" = "min";
 
 /* Alert action title to open error help */
 "More Info" = "Daha Fazla Bilgi";
@@ -157,13 +157,13 @@
 "Other" = "Diğer";
 
 /* The title text for the insulin sensitivity scaling setting */
-"Overall Insulin Needs" = "Toplam İnsülin Gereksinimi";
+"Overall Insulin Needs" = "Genel İnsülin Gereksinimleri";
 
 /* The title text for the override presets screen */
-"Override Presets" = "Ön Ayarları Geçersiz Kıl";
+"Override Presets" = "Ön Ayarları Geçersiz Kılma";
 
 /* Text directing the user to configure override presets */
-"Override presets can be set up under the 'Configuration' section of the settings screen." = "Geçersiz kılma ön ayarları, ayarlar ekranının 'Yapılandırma' bölümü altında ayarlanabilir.";
+"Override presets can be set up under the 'Configuration' section of the settings screen." = "Ön ayarları geçersiz kılma, ayarlar ekranının 'Yapılandırma' bölümü altında ayarlanabilir.";
 
 /* The section title of glucose overrides */
 "Overrides" = "Geçersiz kılmalar";
@@ -175,7 +175,7 @@
 "PRESETS" = "ÖN AYAR";
 
 /* The title of the screen displaying a pump event */
-"Pump Event" = "Pompa Olayı";
+"Pump Event" = "Pompa Durumu";
 
 /* Title text for button to resume insulin delivery */
 "Resume Delivery" = "İletime devam et";
@@ -184,7 +184,7 @@
 "Resuming" = "Sürdürülüyor";
 
 /* The text for the override preset name field placeholder */
-"Running" = "Antrenman";
+"Running" = "Çalışıyor";
 
 /* Button text for saving glucose correction range schedule
    Button text for saving insulin sensitivity schedule */
@@ -197,7 +197,7 @@
 "Slow" = "Yavaş";
 
 /* The text for the override start time */
-"Start Time" = "Başlangıç Saati";
+"Start Time" = "Başlangıç Zamanı";
 
 /* Title text for suspend resume button when temp basal starting */
 "Starting Temp Basal" = "Geçici Bazal Oranını Başlat";
@@ -206,7 +206,7 @@
 "Suspend Delivery" = "İletimi Askıya Al";
 
 /* Title text for button when insulin delivery is in the process of being stopped */
-"Suspending" = "İptal Etme";
+"Suspending" = "Askıya Al";
 
 /* The text for the override preset symbol setting */
 "Symbol" = "Simge";
@@ -239,7 +239,7 @@
 "U/hour" = "Ü/Sa";
 
 /* The unit string for units */
-"Units" = "Ünite";
+"Units" = "Birimler";
 
 /* Accessibility value for an unknown value
    The default title to use when an entry has none */

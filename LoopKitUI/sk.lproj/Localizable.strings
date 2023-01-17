@@ -3,253 +3,253 @@
 "%1$@ %2$@" = "%1$@ %2$@";
 
 /* Accessibility format string for (1: localized volume)(2: time) */
-"%1$@ units remaining at %2$@" = "%1$@ 单位剩余在 %2$@";
+"%1$@ units remaining at %2$@" = "%1$@ jednotiek zostávajúcich o %2$@";
 
 /* The format for a glucose target range. (1: min target)(2: max target)(3: glucose unit) */
 "%1$@ – %2$@ %3$@" = "%1$@ – %2$@ %3$@";
 
 /* The format for an insulin needs percentage. */
-"%@%% of normal insulin" = "%@%% 胰岛素";
+"%@%% of normal insulin" = "%@%% normálneho inzulínu";
 
 /* Appends a full-stop to a statement */
 "%@." = "%@.";
 
 /* Format string for reservoir volume. (1: The localized volume) */
-"%@U" = "%@单位";
+"%@U" = "%@J";
 
 /* Title of the carb entry absorption time cell */
-"Absorption Time" = "吸收时间";
+"Absorption Time" = "Absorbčný čas";
 
 /* The title for the override emoji activity section */
-"Activity" = "活动";
+"Activity" = "Aktivita";
 
 /* Action sheet confirmation message for pump history deletion */
-"Are you sure you want to delete all history entries?" = "确定要删除所有输入的历史数据吗？";
+"Are you sure you want to delete all history entries?" = "Naozaj chcete vymazať celú históriu podaní?";
 
 /* Action sheet confirmation message for reservoir deletion */
-"Are you sure you want to delete all reservoir values?" = "确定要删除所有的储药器数据吗？";
+"Are you sure you want to delete all reservoir values?" = "Naozaj chcete vymazať všetky údaje zásobníka?";
 
 /* The title of the button to add the credentials for a service */
-"Add Account" = "添加账户";
+"Add Account" = "Pridať účet";
 
 /* The title of the button to remove the credentials for a service */
-"Delete Account" = "删除账户";
+"Delete Account" = "Odstrániť účet";
 
 /* Describes a percentage decrease in overall insulin needs */
-"Basal, bolus, and correction insulin dose amounts are decreased by %@%%." = "基础率,大剂量及追加剂量将以%@%%减少";
+"Basal, bolus, and correction insulin dose amounts are decreased by %@%%." = "Bazál, Bolus, a korekčná dávka inzulínu sú znížené o %@%%.";
 
 /* Describes a percentage increase in overall insulin needs */
-"Basal, bolus, and correction insulin dose amounts are increased by %@%%." = "基础率,大剂量及追加剂量将以%@%%增加";
+"Basal, bolus, and correction insulin dose amounts are increased by %@%%." = "Bazál, Bolus, a korekčná dávka inzulínu sú navýšené o %@%%.";
 
 /* Describes a lack of change in overall insulin needs */
-"Basal, bolus, and correction insulin dose amounts are unaffected." = "基础率,大剂量及追加剂量将不受该设置影响";
+"Basal, bolus, and correction insulin dose amounts are unaffected." = "Bazál, Bolus, a korekčná dávka inzulínu nie sú ovplyvnené.";
 
 /* The title of the cancel action in an action sheet */
-"Cancel" = "取消";
+"Cancel" = "Zrušiť";
 
 /* The text for the override cancellation button */
-"Cancel Override" = "取消覆盖";
+"Cancel Override" = "Zrušiť Režim";
 
 /* Title text for suspend resume button when temp basal canceling */
-"Canceling Temp Basal" = "取消临时基础率";
+"Canceling Temp Basal" = "Ruší sa Dočasný Bazál";
 
 /* The title of the view controller to create a new carb entry */
-"Add Carb Entry" = "添加碳水";
+"Add Carb Entry" = "Pridať Sach";
 
 /* The title of the view controller to edit an existing carb entry */
-"Edit Carb Entry" = "编辑碳水";
+"Edit Carb Entry" = "Upraviť Sach";
 
 /* Footer text for customizing an override from a preset (1: preset name) */
-"Changes will only apply this time you enable the override. The default settings of %@ will not be affected." = "将仅会在启用时覆盖该设置,默认设置%@ 不受影响";
+"Changes will only apply this time you enable the override. The default settings of %@ will not be affected." = "Zmeny budú uplatnené iba počas času keď je režim aktívny. Prednastavené nastavenia %@ nebudú ovplyvnené.";
 
 /* Carb entry section footer text explaining absorption time */
-"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "如果吃大餐请选择比较长的吸收时间，或者是以脂肪和蛋白为主的食物。该设置仅为算法的一般原则，具体请根据自身情况调整";
+"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Zvoľte dlhší absorbčný čas pre väčšie jedlá, alebo jedlá s obsahom bielkovín a tukov. Toto je iba návod pre algoritmus a nemusí byť presný.";
 
 /* The format string describing the date of a COB value. The first format argument is the localized date. */
-"com.loudnate.CarbKit.COBDateLabel" = "在 %1$@";
+"com.loudnate.CarbKit.COBDateLabel" = "dňa %1$@";
 
 /* The format string describing the starting date of a total value. The first format argument is the localized date. */
-"com.loudnate.CarbKit.totalDateLabel" = "自从 %1$@";
+"com.loudnate.CarbKit.totalDateLabel" = "od %1$@";
 
 /* The format string describing the date of an IOB value. The first format argument is the localized date. */
-"com.loudnate.InsulinKit.IOBDateLabel" = "在 %1$@";
+"com.loudnate.InsulinKit.IOBDateLabel" = "dňa %1$@";
 
 /* The format string describing the starting date of a total value. The first format argument is the localized date. */
-"com.loudnate.InsulinKit.totalDateLabel" = "自从 %1$@";
+"com.loudnate.InsulinKit.totalDateLabel" = "od %1$@";
 
 /* The title of the action used to dismiss an error alert */
-"com.loudnate.LoopKit.errorAlertActionTitle" = "确定";
+"com.loudnate.LoopKit.errorAlertActionTitle" = "OK";
 
 /* The title for the override emoji condition section */
-"Condition" = "条件";
+"Condition" = "Stav";
 
 /* Title of the setup button to continue */
-"Continue" = "继续";
+"Continue" = "Pokračovať";
 
 /* The section footer of correction range schedule */
-"Correction range is the blood glucose range that you would like Loop to correct to." = "校正范围指Loop系统会主动调整胰岛素输注并将血糖保持在该范围内";
+"Correction range is the blood glucose range that you would like Loop to correct to." = "Korekčný rozsah je hranica krvného cukru ku ktorej chcete aby Slučka krvný cukor korigovala.";
 
 /* The text for a custom override */
-"Custom" = "自定义";
+"Custom" = "Vlastné";
 
 /* The title for the custom override entry screen */
-"Custom Override" = "自定义覆盖";
+"Custom Override" = "Vlastné Nastavenie";
 
 /* Title of the carb entry date picker cell */
-"Date" = "日期";
+"Date" = "Dátum";
 
 /* Button title to delete all objects */
-"Delete All" = "删除所有";
+"Delete All" = "Vymazať všetko";
 
 /* The text for the override duration setting */
-"Duration" = "持续时间";
+"Duration" = "Trvanie";
 
 /* The title for the override editing screen */
-"Edit Override" = "编辑新设置";
+"Edit Override" = "Uprav Override";
 
 /* Footer text for editing an active override (1: preset name) */
-"Editing affects only the active override. The default settings of %@ will not be affected." = "编辑仅会影响正在使用的“覆盖”设置,默认设置%@不受影响";
+"Editing affects only the active override. The default settings of %@ will not be affected." = "Upravenie vplýva iba na aktívny override. Prednastavené hodnoty %@ nebudú ovplyvnené.";
 
 /* The text for the indefinite override duration setting */
-"Enable Indefinitely" = "一直使用";
+"Enable Indefinitely" = "Zapnúť Neobmedzene";
 
 /* The detail text describing an enabled setting */
-"Enabled" = "已启用";
+"Enabled" = "Zapnuté";
 
 /* The placeholder text instructing users how to enter a maximum bolus */
-"Enter a number of units" = "输入单位量";
+"Enter a number of units" = "Zadajte počet jednotiek";
 
 /* The placeholder text instructing users how to enter a maximum basal rate */
-"Enter a rate in units per hour" = "输入每小时基础率";
+"Enter a rate in units per hour" = "Zadajte hodnotu v jednotkách za hodinu";
 
 /* Section title for fast absorbing food */
-"Fast" = "快速";
+"Fast" = "Rýchly";
 
 /* The description shown on the insulin sensitivity schedule interface. */
-"Insulin sensitivity describes how your blood glucose should respond to a 1 Unit dose of insulin. Smaller values mean more insulin will be given when above target. Values that are too small can cause dangerously low blood glucose." = "胰岛素敏感系数指每单位胰岛素可以造成的血糖变化.比较小的值意味着当血糖高于目标时需要更多的胰岛素,如果该值设置太小可能会造成严重低血糖,请谨慎设置该参数";
+"Insulin sensitivity describes how your blood glucose should respond to a 1 Unit dose of insulin. Smaller values mean more insulin will be given when above target. Values that are too small can cause dangerously low blood glucose." = "Inzulínová citlivosť opisuje ako by mal váš krvný cukor reagovať na 1 Jednotku dávky inzulínu. Menšie hodnoty znamenajú že bude podané väčsie množstvo inzulínu keď ste nad rozsahom. Hodnoty ktoré sú príliš nízke môžu spôsobiť nebezpečné zníženie hladiny krvného cukru.";
 
 /* Placeholder for maximum value in glucose range */
-"max" = "最大";
+"max" = "max";
 
 /* The title text for the maximum basal rate value */
-"Maximum Basal Rate" = "最大基础率限制";
+"Maximum Basal Rate" = "Maximálna Dávka Bazálu";
 
 /* The title text for the maximum bolus value */
-"Maximum Bolus" = "最大大剂量限制";
+"Maximum Bolus" = "Maximálny Bolus";
 
 /* Section title for medium absorbing food */
-"Medium" = "中等";
+"Medium" = "Stredný";
 
 /* Placeholder for minimum value in glucose range */
-"min" = "分钟";
+"min" = "min";
 
 /* Alert action title to open error help */
-"More Info" = "更多信息";
+"More Info" = "Viac Info";
 
 /* The text for the override preset name setting */
-"Name" = "名称";
+"Name" = "Názov";
 
 /* The title for the new override preset entry screen */
-"New Preset" = "新配置";
+"New Preset" = "Nové Nastavenie";
 
 /* Section title for no-carb food
    The title for override emoji miscellaneous section */
-"Other" = "其他";
+"Other" = "Iné";
 
 /* The title text for the insulin sensitivity scaling setting */
-"Overall Insulin Needs" = "全部胰岛素需要";
+"Overall Insulin Needs" = "Celková Potreba Inzulínu";
 
 /* The title text for the override presets screen */
-"Override Presets" = "覆盖预设值";
+"Override Presets" = "Prednastavené režimy";
 
 /* Text directing the user to configure override presets */
-"Override presets can be set up under the 'Configuration' section of the settings screen." = "覆盖预设置可以通过”设置”的”配置”来完成";
+"Override presets can be set up under the 'Configuration' section of the settings screen." = "Prednastavené režimy môžu byť nastavené v sekcii Nastavenia \"Konfigurácia\".";
 
 /* The section title of glucose overrides */
-"Overrides" = "覆盖";
+"Overrides" = "Režimy";
 
 /* Title for the pre-meal override range */
-"Pre-Meal" = "餐前模式";
+"Pre-Meal" = "Pred-Jedlom";
 
 /* The section header text override presets */
-"PRESETS" = "预设";
+"PRESETS" = "Prednastavené";
 
 /* The title of the screen displaying a pump event */
-"Pump Event" = "胰岛素泵事件";
+"Pump Event" = "Udalosť Pumpy";
 
 /* Title text for button to resume insulin delivery */
-"Resume Delivery" = "恢复输注";
+"Resume Delivery" = "Obnoviť podávanie inzulínu";
 
 /* Title text for button when insulin delivery is in the process of being resumed */
-"Resuming" = "恢复中";
+"Resuming" = "Obnovuje sa";
 
 /* The text for the override preset name field placeholder */
-"Running" = "运行中";
+"Running" = "Spustené";
 
 /* Button text for saving glucose correction range schedule
    Button text for saving insulin sensitivity schedule */
-"Save" = "保存";
+"Save" = "Uložiť";
 
 /* The section header text for a scheduled override */
-"SCHEDULED OVERRIDE" = "计划覆盖";
+"SCHEDULED OVERRIDE" = "Plánovaný Režim";
 
 /* Section title for slow absorbing food */
-"Slow" = "慢";
+"Slow" = "Pomalé";
 
 /* The text for the override start time */
-"Start Time" = "启动时间";
+"Start Time" = "Čas začiatku";
 
 /* Title text for suspend resume button when temp basal starting */
-"Starting Temp Basal" = "启动临时寄出";
+"Starting Temp Basal" = "Spustiť Dočasný Bazál";
 
 /* Title text for button to suspend insulin delivery */
-"Suspend Delivery" = "暂停输注";
+"Suspend Delivery" = "Pozastaviť Podávanie inzulínu";
 
 /* Title text for button when insulin delivery is in the process of being stopped */
-"Suspending" = "正在暂停";
+"Suspending" = "Pozastavuje sa";
 
 /* The text for the override preset symbol setting */
-"Symbol" = "符号";
+"Symbol" = "Symbol";
 
 /* The empty-state text for a configuration value */
-"Tap to set" = "点击设置";
+"Tap to set" = "Stlačením nastavte";
 
 /* Text directing the user to configure their first override preset */
-"Tap '+' to create a new override preset." = "点击 '+' 创建一个新配置。";
+"Tap '+' to create a new override preset." = "Stlačte '+' pre nový prednastavený režim.";
 
 /* The text for the override target range setting */
-"Target Range" = "目标范围";
+"Target Range" = "Cieľový rozsah";
 
 /* The title for the override selection screen */
-"Temporary Override" = "临时覆盖";
+"Temporary Override" = "Dočasný Režim";
 
 /* The default placeholder string for a credential */
-"Required" = "需要";
+"Required" = "Povinné";
 
 /* Alert body displayed absorption time greater than max (1: maximum absorption time) */
-"The maximum absorption time is %@" = "最大吸收时间为  %@";
+"The maximum absorption time is %@" = "Maximálny absorbčný čas je %@";
 
 /* Alert body displayed for quantity greater than max (1: maximum quantity in grams) */
-"The maximum allowed amount is %@ grams" = "允许的最大量为 %@ g";
+"The maximum allowed amount is %@ grams" = "Maximálna povolená hodnota je %@ gramov";
 
 /* The schedule table view header describing the configured time zone difference from the default time zone. The substitution parameters are: (1: time zone name)(2: +/-)(3: time interval) */
-"Times in %1$@%2$@%3$@" = "时间 %1$@%2$@%3$@";
+"Times in %1$@%2$@%3$@" = "Časy v %1$@%2$@%3$@";
 
 /* The unit string for units per hour */
-"U/hour" = "单位/小时";
+"U/hour" = "J/hod";
 
 /* The unit string for units */
-"Units" = "单位";
+"Units" = "Jednotky";
 
 /* Accessibility value for an unknown value
    The default title to use when an entry has none */
-"Unknown" = "未知";
+"Unknown" = "Neznáme";
 
 /* Label indicating validation is occurring */
-"Verifying" = "验证";
+"Verifying" = "Overuje sa";
 
 /* Title of an alert containing a validation warning */
-"Warning" = "警告";
+"Warning" = "Upozornenie";
 
 /* Title for the workout override range */
-"Workout" = "锻炼/运动模式";
+"Workout" = "Cvičenie";

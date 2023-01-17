@@ -1,98 +1,98 @@
 /* Describes a certain bolus failure (1: size of the bolus in units) */
-"%1$@ U bolus failed" = "bolus eșuat de %1$@ U";
+"%1$@ U bolus failed" = "%1$@ J bolusu zlyhalo";
 
 /* Describes an uncertain bolus failure (1: size of the bolus in units) */
-"%1$@ U bolus may not have succeeded" = "bolusul de %1$@ U s-ar putea să fi eșuat";
+"%1$@ U bolus may not have succeeded" = "%1$@ J bolusu sa možno nepodarilo";
 
 /* The error description describing when Health sharing was denied */
-"Authorization Denied" = "Autorizare refuzată";
+"Authorization Denied" = "Autorizácia zamietnutá";
 
 /* Recovery instruction for an uncertain bolus failure */
-"Check your pump before retrying" = "Verificați pompa înainte de a încerca din nou";
+"Check your pump before retrying" = "Skontrolujte vašu pumpu predtým ako skúsite znova";
 
 /* The description of an error returned when attempting to delete a sample not shared by the current app */
-"com.loudnate.CarbKit.deleteCarbEntryUnownedErrorDescription" = "Autorizare refuzată";
+"com.loudnate.CarbKit.deleteCarbEntryUnownedErrorDescription" = "Autorizácia zamietnutá";
 
 /* The error recovery suggestion when attempting to delete a sample not shared by the current app */
-"com.loudnate.carbKit.sharingDeniedErrorRecoverySuggestion" = "Acest exemplu poate fi șters din aplicația Sănătate";
+"com.loudnate.carbKit.sharingDeniedErrorRecoverySuggestion" = "Táto vzorka môže byť vymazaná z app Zdravie";
 
 /* Generic pump error description */
-"Communication Failure" = "Eroare de comunicare";
+"Communication Failure" = "Spojenie zlyhalo";
 
 /* Generic pump error description */
-"Connection Failure" = "Eroare de conectare";
+"Connection Failure" = "Spojenie zlyhalo";
 
 /* Generic pump error description */
-"Device Refused" = "Dispozitiv refuzat";
+"Device Refused" = "Zariadenie Odmietnuté";
 
 /* Recovery suggestion for a no data error */
-"Ensure carb data exists for the specified date" = "Asigurați-vă că există date despre carbohidrați pentru data specificată";
+"Ensure carb data exists for the specified date" = "Uistite sa že údaje o sacharidoch existujú pre tento dátum";
 
 /* Glucose trend down */
-"Falling" = "În scădere";
+"Falling" = "Klesá";
 
 /* Glucose trend down-down */
-"Falling fast" = "În scădere rapidă";
+"Falling fast" = "Klesá rýchlo";
 
 /* Glucose trend down-down-down */
-"Falling very fast" = "În scădere foarte rapidă";
+"Falling very fast" = "Klesá veľmi rýchlo";
 
 /* Glucose trend flat */
-"Flat" = "Constantă";
+"Flat" = "Rovný";
 
 /* The short unit display string for grams per U */
-"g/U" = "g/U";
+"g/U" = "g/J";
 
 /* Generic pump error description */
-"Invalid Configuration" = "Configurație invalidă";
+"Invalid Configuration" = "Neplatná Konfigurácia";
 
 /* Recovery instruction for a certain bolus failure */
-"It is safe to retry" = "Puteți încerca fără riscuri";
+"It is safe to retry" = "Je bezpečné skúsiť znova";
 
 /* The short unit display string for milligrams per deciliter per U */
-"mg/dL/U" = "mg/dL/U";
+"mg/dL/U" = "mg/dL/J";
 
 /* The short unit display string for millimoles per liter */
 "mmol/L" = "mmol/L";
 
 /* The short unit display string for millimoles per liter per U */
-"mmol/L/U" = "mmol/L/U";
+"mmol/L/U" = "mmol/L/J";
 
 /* Sensor state description for the non-valid state */
-"Needs Attention" = "Necesită atenție";
+"Needs Attention" = "Vyžaduje pozornosť";
 
 /* Describes an error for no data found in a CarbStore request */
-"No values found" = "Nu s-au găsit valori";
+"No values found" = "Nenašli sa údaje";
 
 /* Sensor state description for the valid state */
 "OK" = "OK";
 
 /* The error recovery suggestion when Health sharing was denied */
-"Please re-enable sharing in Health" = "Vă rugăm să re-activați partajarea datelor în Sănătate";
+"Please re-enable sharing in Health" = "Prosím znovu povoľte zdieľanie v Zdravie";
 
 /* Glucose trend up */
-"Rising" = "În creștere";
+"Rising" = "Stúpa";
 
 /* Glucose trend up-up */
-"Rising fast" = "În creștere rapidă";
+"Rising fast" = "Stúpa rýchlo";
 
 /* Glucose trend up-up-up */
-"Rising very fast" = "În creștere foarte rapidă";
+"Rising very fast" = "Stúpa veľmi rýchlo";
 
 /* The short unit display string for international units of insulin */
-"U" = "U";
+"U" = "J";
 
 /* The short unit display string for international units of insulin per hour */
-"U/hr" = "U/oră";
+"U/hr" = "J/hod";
 
 /* The long unit display string for a singular international unit of insulin */
-"Unit" = "Unități";
+"Unit" = "Jednotka";
 
 /* The long unit display string for a singular international unit of insulin per hour */
-"Unit/hour" = "Unități/oră";
+"Unit/hour" = "Jednotka/hodina";
 
 /* The long unit display string for international units of insulin */
-"Units" = "Unități";
+"Units" = "Jednotky";
 
 /* The long unit display string for international units of insulin per hour */
-"Units/hour" = "Unități/oră";
+"Units/hour" = "Jednotky/hodina";
