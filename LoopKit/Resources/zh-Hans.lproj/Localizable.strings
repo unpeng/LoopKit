@@ -91,3 +91,263 @@
 /* The long unit display string for international units of insulin per hour */
 "Units/hour" = "单位/小时";
 
+/* Format for correction range override therapy setting card */
+"%@ Range" = "%@ 范围";
+
+/* Descriptive format string for glucose safety limit (1: app name) */
+"%1$@ will deliver basal and recommend bolus insulin only if your glucose is predicted to be above this limit for the next three hours." = "%1$@ 只会在你的血糖预计在接下来的三个小时内高于这个限制时，才会提供基础胰岛素并建议用量式胰岛素。";
+
+/* Descriptive text for guardrail high value warning for schedule interface */
+"A value you have entered is higher than what is typically recommended for most people." = "您输入的值比大多数人通常推荐的要高。";
+
+/* Descriptive text for guardrail low value warning for schedule interface */
+"A value you have entered is lower than what is typically recommended for most people." = "您输入的值比大多数人通常推荐的要低。";
+
+/* Brand name for afrezza insulin type
+Title for Afrezza insulin type */
+"Afrezza" = "Afrezza";
+
+/* Description for afrezza insulin type */
+"Afrezza is an ultra rapid-acting mealtime insulin that is breathed in through your lungs using an oral inhaler and made by MannKind" = "Afrezza是一种超快速作用的餐时胰岛素，通过口腔雾化器吸入肺部，并由MannKind生产。";
+
+/* Brand name for apidra insulin type */
+"Apidra" = "Apidra";
+
+/* Title for Apidra insulin type */
+"Apidra (insulin glulisine)" = "Apidra（胰岛素谷氨酰胺）";
+
+/* Description for apidra insulin type */
+"Apidra (insulin glulisine) is a rapid-acting insulin made by Sanofi-aventis " = "Apidra（胰岛素谷氨酰胺）是由赛诺菲公司制造的一种快速作用的胰岛素。";
+
+/* 基础剂量类型的标题 */
+"Basal" = "基础";
+
+/* 基础剂量的标题文本 */
+"Basal Rates" = "基础速率";
+
+/* 快速剂量类型的标题 */
+"Bolus" = "大剂量";
+
+/* 碳水化合物比例的标题文本 */
+"Carb Ratios" = "碳水化合物比例";
+
+/* 删除不属于当前应用程序的示例时返回的错误描述 */
+"com.loudnate.CarbKit.deleteCarbEntryUnownedErrorDescription" = "权限不足";
+
+/* 尝试删除未与当前应用程序共享的示例时的错误恢复建议 */
+"com.loudnate.carbKit.sharingDeniedErrorRecoverySuggestion" = "此示例可以在健康应用中删除。";
+
+/* 泵的通用错误描述 */
+"Communication Failure" = "通信失败";
+
+/* 不确定输送原因的失败 */
+"Communications interrupted during insulin delivery command." = "在胰岛素输送命令期间通信中断。";
+
+/* 泵的通用错误描述 */
+"Connection Failure" = "连接失败";
+
+/* 血糖目标范围的标题文本 */
+"Correction Range" = "矫正范围";
+
+/* 血糖目标范围的描述性文本（1：应用程序名称） */
+"Correction Range is the glucose value (or range of values) that you want %1$@ to aim for in adjusting your basal insulin and helping you calculate your boluses." = "矫正范围是您希望 %1$@ 在调整您的基础胰岛素和帮助您计算您的快速剂量时瞄准的血糖值（或一系列值）。";
+
+/* 需要关键软件更新的描述 */
+"Critical Update" = "重要更新";
+
+/* 交付限制的标题文本 */
+"Delivery Limits" = "输送限制";
+
+/* 泵的通用错误描述 */
+"Device Refused" = "设备拒绝";
+
+/* 无数据错误的恢复建议 */
+"Ensure carb data exists for the specified date" = "请确保已输入指定日期的碳水化合物数据。";
+
+/* Glucose trend down */
+"Falling" = "下降";
+
+/* Glucose trend down-down */
+"Falling fast" = "迅速下降";
+
+/* Glucose trend down-down-down */
+"Falling very fast" = "急速下降";
+
+/* Brand name for fiasp insulin type
+Title for Fiasp insulin type */
+"Fiasp" = "Fiasp";
+
+/* Description for fiasp insulin type */
+"Fiasp is a mealtime insulin aspart formulation with the addition of nicotinamide (vitamin B3) made by Novo Nordisk" = "Fiasp是诺和诺德制造的一种餐时胰岛素阿斯巴甜配方，加入烟酰胺（维生素B3）";
+
+/* Glucose trend flat */
+"Flat" = "平稳";
+
+/* Descriptive text for fast acting insulin model (1: app name) */
+"For fast acting insulin, %1$@ assumes it is actively working for 6 hours. You can choose from different models for the peak activity." = "对于快速作用的胰岛素，%1$@ 假设其在6小时内处于活跃状态。您可以从不同的峰值活动模型中进行选择。";
+
+/* The short unit display string for grams per U */
+"g/U" = "克/单位";
+
+/* Title text for glucose safety limit */
+"Glucose Safety Limit" = "血糖安全限制";
+
+/* The long unit display string for a singular hour */
+"Hour" = "小时";
+
+/* The long unit display string for hours */
+"Hours" = "小时";
+
+/* Brand name for humalog insulin type */
+"Humalog" = "Humalog";
+
+/* Title for Humalog insulin type */
+"Humalog (insulin lispro)" = "Humalog (胰岛素里斯普)";
+
+/* Description for humalog insulin type */
+"Humalog (insulin lispro) is a rapid-acting insulin made by Eli Lilly" = "Humalog (胰岛素里斯普) 是由伊莉莉制药公司生产的一种快速作用的胰岛素。";
+
+/* Title text for fast acting insulin model */
+"Insulin Model" = "胰岛素型号";
+
+/* Title text for insulin sensitivity */
+"Insulin Sensitivities" = "胰岛素敏感性";
+
+/* Generic pump error description */
+"Invalid Configuration" = "配置无效";
+
+/* Brand name for lyumjev insulin type
+Title for Lyumjev insulin type */
+"Lyumjev" = "Lyumjev";
+
+/* Description for lyumjev insulin type */
+"Lyumjev is a mealtime insulin lispro formulation with the addition of citrate and treprostinil made by Eli Lilly" = "Lyumjev是由Eli Lilly生产的餐前胰岛素利斯普罗制剂，添加了柠檬酸和曲普多斯汀。";
+
+/* Recovery suggestion for uncertain delivery */
+"Make sure your pump is within communication range of your phone." = "确保您的泵在您的手机通信范围内。";
+
+/* Title text for maximum basal rate configuration */
+"Maximum Basal Rate" = "最大基础率";
+
+/* Descriptive text for maximum basal rate (1: app name) */
+"Maximum Basal Rate is the highest temporary basal rate %1$@ is allowed to set." = "最大基础率是%1$@允许设定的最高临时基础率。";
+
+/* Title text for maximum bolus configuration */
+"Maximum Bolus" = "最大Bolus剂量";
+
+/* Descriptive text for maximum bolus */
+"Maximum Bolus is the highest bolus amount you can deliver at one time to cover carbs or bring down high glucose." = "最大剂量是你一次可以注射的最高剂量，用于覆盖碳水化合物或降低高血糖。";
+
+/* The short unit display string for milligrams per deciliter per U */
+"mg/dL/U" = "mg/dL/单位";
+
+/* The short unit display string for millimoles per liter */
+"mmol/L" = "mmol/L";
+
+/* The short unit display string for millimoles per liter per U */
+"mmol/L/U" = "mmol/L/单位";
+
+/* Sensor state description for the non-valid state */
+"Needs Attention" = "需要关注";
+
+/* Description of no software update needed */
+"No Update" = "无需更新";
+
+/* Describes an error for no data found in a CarbStore request */
+"No values found" = "未找到数值";
+
+/* Brand name for novolog insulin type */
+"Novolog" = "Novolog";
+
+/* Title for Novolog insulin type */
+"Novolog (insulin aspart)" = "Novolog（胰岛素门冬酰胺）";
+
+/* Description for novolog insulin type */
+"NovoLog (insulin aspart) is a rapid-acting insulin made by Novo Nordisk" = "NovoLog（胰岛素门冬酰胺）是诺和诺德生产的快速作用胰岛素";
+
+/* Sensor state description for the valid state */
+"OK" = "正常";
+
+/* Descriptive text for saving settings outside the recommended range */
+"One or more of the values you have entered is outside of what is typically recommended for most people." = "您输入的一个或多个值超出了大多数人通常建议的范围。";
+
+/* The error recovery suggestion when Health sharing was denied */
+"Please re-enable sharing in Health" = "请在健康中重新启用共享";
+
+/* Pre-Meal 模式的标题 */
+"Pre-Meal" = "餐前";
+
+/* 支持的软件更新所需的描述 */
+"Recommended Update" = "推荐更新";
+
+/* 恢复剂量类型的标题 */
+"Resumed" = "已恢复";
+
+/* 血糖趋势上升 */
+"Rising" = "升高";
+
+/* 血糖趋势上升-上升 */
+"Rising fast" = "急速上升";
+
+/* 血糖趋势上升-上升-上升 */
+"Rising very fast" = "非常快速上升";
+
+/* 针对计划界面的警告性高阈值警告的描述文本 */
+"Some of the values you have entered are outside of what is typically recommended for most people." = "您输入的一些值超出了大多数人通常推荐的范围。";
+
+/* 暂停剂量类型的标题 */
+"Suspended" = "已暂停";
+
+/* 临时基础剂量类型的标题 */
+"Temp Basal" = "临时基础率";
+
+/* 针对餐前矫正范围覆盖的描述文本 */
+"Temporarily lower your glucose target before a meal to impact post-meal glucose spikes." = "在餐前临时降低血糖目标，以影响餐后血糖峰值。";
+
+/* 针对运动矫正范围覆盖的描述文本 */
+"Temporarily raise your glucose target before, during, or after physical activity to reduce the risk of low glucose events." = "在运动前、期间或后临时提高血糖目标，以减少低血糖事件的风险。";
+
+/* 高阈值警告的描述文本 */
+"The value you have entered is higher than what is typically recommended for most people." = "您输入的值高于大多数人通常推荐的范围。";
+
+/* 低阈值警告的描述文本 */
+"The value you have entered is lower than what is typically recommended for most people." = "您输入的值低于大多数人通常推荐的范围。";
+
+/* 高阈值警告的描述文本 */
+"The values you have entered are outside of what is typically recommended for most people." = "您输入的值超出了大多数人通常推荐的范围。";
+
+/* 国际胰岛素单位的简短单位显示字符串 */
+"U" = "IU";
+
+/* 国际胰岛素单位每小时的简短单位显示字符串 */
+"U/hr" = "IU/小时";
+
+/* 不确定递送的错误描述 */
+"Uncertain Delivery" = "不确定递送";
+
+/* 单个国际胰岛素单位的长单位显示字符串 */
+"Unit" = "单位";
+
+/* 表示每小时国际胰岛素单位的长单位显示字符串 */
+"Unit/hour" = "单位/小时";
+
+/* 表示国际胰岛素单位的长单位显示字符串 */
+"Units" = "单位";
+
+/* 表示每小时国际胰岛素单位的长单位显示字符串 */
+"Units/hour" = "单位/小时";
+
+/* 需要信息性软件更新的描述 */
+"Update Available" = "可用更新";
+
+/* 用于运动模式的标题 */
+"Workout" = "训练";
+
+/* 基础速率描述性文本 */
+"Your Basal Rate of insulin is the number of units per hour that you want to use to cover your background insulin needs." = "你的胰岛素基础速率是每小时你想要使用的单位数，用来覆盖你的背景胰岛素需求。";
+
+/* 碳水化合物比率描述性文本 */
+"Your Carb Ratio is the number of grams of carbohydrates covered by one unit of insulin." = "你的碳水化合物比率是每个胰岛素单位可覆盖的碳水化合物克数。";
+
+/* 胰岛素敏感度描述性文本 */
+"Your Insulin Sensitivities refer to the drop in glucose expected from one unit of insulin." = "你的胰岛素敏感度是指每个胰岛素单位预期血糖下降的程度。";

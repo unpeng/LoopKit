@@ -234,7 +234,8 @@ public struct StoredDosingDecision {
     public var warnings: [Issue]
     public var errors: [Issue]
     public var syncIdentifier: UUID
-
+    public var automaticDosingStrategy: String
+    
     public init(date: Date = Date(),
                 controllerTimeZone: TimeZone = TimeZone.current,
                 reason: String,
@@ -258,7 +259,8 @@ public struct StoredDosingDecision {
                 manualBolusRequested: Double? = nil,
                 warnings: [Issue] = [],
                 errors: [Issue] = [],
-                syncIdentifier: UUID = UUID()) {
+                syncIdentifier: UUID = UUID(),
+                automaticDosingStrategy: String = "tempBasalOnly") {
         self.date = date
         self.controllerTimeZone = controllerTimeZone
         self.reason = reason
@@ -283,6 +285,7 @@ public struct StoredDosingDecision {
         self.warnings = warnings
         self.errors = errors
         self.syncIdentifier = syncIdentifier
+        self.automaticDosingStrategy = automaticDosingStrategy
     }
 
     public struct Settings: Codable, Equatable {
@@ -379,7 +382,8 @@ extension StoredDosingDecision: Codable {
                   manualBolusRequested: try container.decodeIfPresent(Double.self, forKey: .manualBolusRequested),
                   warnings: try container.decodeIfPresent([Issue].self, forKey: .warnings) ?? [],
                   errors: try container.decodeIfPresent([Issue].self, forKey: .errors) ?? [],
-                  syncIdentifier: try container.decode(UUID.self, forKey: .syncIdentifier))
+                  syncIdentifier: try container.decode(UUID.self, forKey: .syncIdentifier),
+                  automaticDosingStrategy: try container.decode(String.self, forKey: .automaticDosingStrategy))
     }
 
     public func encode(to encoder: Encoder) throws {
@@ -408,6 +412,7 @@ extension StoredDosingDecision: Codable {
         try container.encodeIfPresent(!warnings.isEmpty ? warnings : nil, forKey: .warnings)
         try container.encodeIfPresent(!errors.isEmpty ? errors : nil, forKey: .errors)
         try container.encode(syncIdentifier, forKey: .syncIdentifier)
+        try container.encode(automaticDosingStrategy, forKey: .automaticDosingStrategy)
     }
 
     private enum CodingKeys: String, CodingKey {
@@ -435,6 +440,7 @@ extension StoredDosingDecision: Codable {
         case warnings
         case errors
         case syncIdentifier
+        case automaticDosingStrategy
     }
 }
 
