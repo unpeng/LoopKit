@@ -11,6 +11,6 @@ import Foundation
 public enum Action: Codable {
     case temporaryScheduleOverride(OverrideAction)
     case cancelTemporaryOverride(OverrideCancelAction)
-    case bolusEntry(BolusAction)
+    case bolusEntry(BolusAction, CarbAction?, AutomaticDosingStrategy?)
     case carbsEntry(CarbAction)
 }
